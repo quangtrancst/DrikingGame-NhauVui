@@ -5,6 +5,7 @@ import cardsData from './cards';
 import Card from './components/Card';
 import { shuffleArray } from './utils/shuffle';
 import { GameCard } from './types';
+import { playClickSound, initAudioContext } from './utils/sound';
 
 const App: React.FC = () => {
   const [gameStarted, setGameStarted] = useState<boolean>(false);
@@ -18,12 +19,15 @@ const App: React.FC = () => {
   }, []);
 
   const handleStart = () => {
+    initAudioContext(); // Initialize audio on user interaction
+    playClickSound();
     setGameStarted(true);
     setCurrentIndex(0);
     setIsFlipped(false);
   };
 
   const handleNext = useCallback(() => {
+    playClickSound();
     if (currentIndex < shuffledCards.length - 1) {
       setTimeout(() => {
         setIsFlipped(false);
@@ -35,6 +39,7 @@ const App: React.FC = () => {
   }, [currentIndex, shuffledCards.length]);
 
   const handleRestart = () => {
+    playClickSound();
     setShuffledCards(shuffleArray(cardsData));
     setGameStarted(false);
     setCurrentIndex(0);

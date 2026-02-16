@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { GameCard, CARD_COLORS, CARD_LABELS, CardType } from '../types';
 import { RotateCcw, Eye, Beer, Shuffle } from 'lucide-react';
+import { playFlipSound, playRevealSound } from '../utils/sound';
 
 interface CardProps {
   data: GameCard;
@@ -59,16 +60,23 @@ const Card: React.FC<CardProps> = ({ data, isFlipped, onFlip }) => {
 
   const handleShowAnswer = (e: React.MouseEvent) => {
     e.stopPropagation();
+    playRevealSound();
     setShowAnswer(true);
   };
 
   const handleRevealPuzzle = (e: React.MouseEvent) => {
     e.stopPropagation();
+    playRevealSound();
     setPuzzleRevealed(true);
   };
 
+  const handleCardClick = () => {
+    playFlipSound();
+    onFlip();
+  };
+
   return (
-    <div className="relative w-full max-w-sm h-96 perspective-1000 mx-auto cursor-pointer" onClick={onFlip}>
+    <div className="relative w-full max-w-sm h-96 perspective-1000 mx-auto cursor-pointer" onClick={handleCardClick}>
       <motion.div
         className="w-full h-full relative preserve-3d transition-transform duration-500"
         variants={variants}

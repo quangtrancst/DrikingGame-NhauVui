@@ -1,20 +1,48 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🍺 Nhậu Vui - Drinking Game
 
-# Run and deploy your AI Studio app
+A fun Vietnamese drinking game web app with beautiful UI, card flipping animations, and entertaining game modes.
 
-This contains everything you need to run your app locally.
+**Created by:** QuangCST
 
-View your app in AI Studio: https://ai.studio/apps/drive/1YdKPgPg8HdUVGBake6Xr_iwm5GCtnjw2
+## ✨ Features
 
-## Run Locally
+- 🎴 165+ unique cards across 6 game types
+- 🎯 Truth, Dare, Never Have I Ever, Riddles, Trivia, Mini-games
+- 🎨 Beautiful pastel design with smooth animations
+- 📱 Fully responsive mobile-first design
+- 🔊 Interactive sound effects
+- 🎭 Vietnamese language support
 
-**Prerequisites:**  Node.js
+## 🚀 Quick Start
 
+**Prerequisites:** Node.js installed
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+
+If you like it. Please give me 1 star ✨⭐ and follow my tiktok 🤩💕: https://www.tiktok.com/@_haichungta
+
+## 🎮 How to Play
+
+1. Click "Bắt đầu" to start the game
+2. Tap cards to flip and reveal challenges
+3. Complete challenges or take the penalty drinks
+4. Have fun responsibly! 🍻
+
+## 👨‍💻 Developer
+
+**QuangCST** - 2026
+
+Drink responsibly. Enjoy the game!
